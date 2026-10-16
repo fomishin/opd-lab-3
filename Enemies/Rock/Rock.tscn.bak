@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cfditc2mn5gnl"]
+
+[ext_resource type="Script" uid="uid://hmkrjv7ebc36" path="res://Enemies/Rock/Rock.cs" id="1_k7icd"]
+
+[sub_resource type="Gradient" id="Gradient_k7icd"]
+colors = PackedColorArray(0.36725605, 0.28301808, 0.28216043, 1, 0.6402972, 0.6402972, 0.6402971, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1vivr"]
+gradient = SubResource("Gradient_k7icd")
+fill_from = Vector2(0.49829352, 1)
+fill_to = Vector2(0.12627986, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1vivr"]
+radius = 23.021729
+
+[node name="Rock" type="Area2D" unique_id=739586183]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_k7icd")
+metadata/_custom_type_script = "uid://hmkrjv7ebc36"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=398160896]
+texture = SubResource("GradientTexture2D_1vivr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=700212114]
+shape = SubResource("CircleShape2D_1vivr")
